@@ -21,5 +21,5 @@ jobs:
         with:
           push: true
           tags: |
-            promosquad/docker-dev:latest
-            promosquad/docker-dev:${{ github.sha }}
+            ghcr.io/promosquad/docker-dev:latest
+            ghcr.io/promosquad/docker-dev:${{ github.sha }}
