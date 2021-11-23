@@ -12,10 +12,8 @@ RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 
 # Set up the Python development environment
 WORKDIR /app
-COPY requirements.txt .
 RUN apt-get install -y gcc libpq-dev \
-    && pip install -U pip wheel \
-    && pip install -r requirements.txt
+    && pip install -U pip wheel
 EXPOSE 8080
 
 # Create a user for development
