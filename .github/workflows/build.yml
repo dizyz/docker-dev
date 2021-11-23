@@ -16,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build HTTP container image
         uses: docker/build-push-action@v2
         with:
