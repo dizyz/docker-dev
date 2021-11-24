@@ -3,16 +3,13 @@ FROM python:3.9-slim
 
 # Add any tools that are needed beyond Python 3.9
 RUN apt-get update \
-    && apt-get install -y sudo git zip tree curl wget jq \
+    && apt-get install -y sudo git zip tree curl wget jq python3-selenium \
     && apt-get autoremove -y \
     && apt-get clean -y
 
 # Install IBM Cloud CLI
 RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 RUN ibmcloud cf install
-
-# Install Chromium Driver
-RUN apt-get install -y chromium-driver
 
 # Set up the Python development environment
 WORKDIR /app
