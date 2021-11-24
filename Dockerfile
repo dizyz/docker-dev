@@ -9,6 +9,7 @@ RUN apt-get update \
 
 # Install IBM Cloud CLI
 RUN curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+RUN ibmcloud cf install
 
 # Set up the Python development environment
 WORKDIR /app
