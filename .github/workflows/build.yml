@@ -29,4 +29,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/dizyz/python-selenium:latest
-            ghcr.io/dizys/python-selenium:${{ github.sha }}
+            ghcr.io/dizyz/python-selenium:${{ github.sha }}
