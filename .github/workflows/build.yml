@@ -28,5 +28,5 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/promosquad/docker-dev:latest
-            ghcr.io/promosquad/docker-dev:${{ github.sha }}
+            ghcr.io/dizyz/python-selenium:latest
+            ghcr.io/dizys/python-selenium:${{ github.sha }}
